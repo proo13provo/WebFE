@@ -41,7 +41,7 @@
 
     <div class="text-center">
       <p class="text-sm text-indigo-200 mb-2">Don't have an account?</p>
-      <button class="px-6 py-2 rounded-full text-white border border-indigo-300 hover:bg-indigo-700 transition duration-300">
+      <button (click)="gotoSignin()" class="px-6 py-2 rounded-full text-white border border-indigo-300 hover:bg-indigo-700 transition duration-300">
         Sign Up
       </button>
     </div>
@@ -122,48 +122,3 @@
   <i class="fas fa-headset text-white text-2xl"></i>
 </div>
 </div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-@if (loadService.loading$ | async){
-  <div class="loadService.loading$ | async" class="fixed inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center z-50 space-y-4">
-    <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-blue-500"></div>
-    <p class="text-white text-lg font-medium">Đang đăng nhập...</p>
-  </div>
-}
-<script>
-  // Form submission
-  var loginForm = document.getElementById('loginForm');
-  if (loginForm) {
-    loginForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var emailInput = document.getElementById('email');
-      var passwordInput = document.getElementById('password');
-      var email = emailInput ? emailInput.value : '';
-      var passwordVal = passwordInput ? passwordInput.value : '';
-      // Here you would typically send this data to your backend
-      console.log('Login attempt with:', { email: email, password: passwordVal });
-      // Simulate loading
-      var submitBtn = this.querySelector('button[type="submit"]');
-      if (submitBtn) {
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Logging in...';
-        submitBtn.disabled = true;
-      }
-      // Simulate API call
-      setTimeout(function () {
-        if (submitBtn) {
-          submitBtn.innerHTML = 'Login to GameHub';
-          submitBtn.disabled = false;
-        }
-        // For demo purposes, show a success message
-        alert('Login successful! Redirecting to your dashboard...');
-        // window.location.href = 'dashboard.html';
-      }, 2000);
-    });
-  }
-  // Support button
-  var supportBtn = document.getElementById('supportBtn');
-  if (supportBtn) {
-    supportBtn.addEventListener('click', function () {
-      alert('GameHub Support: How can we help you today?');
-    });
-  }
-</script>

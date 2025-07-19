@@ -26,8 +26,7 @@ export class Login {
   @ViewChild('submitBtn') submitBtn!: ElementRef<HTMLButtonElement>;
   constructor(private http: HttpClient,
               private router: Router,
-              private authService: AuthService,
-              protected loadService: LoadService ) { } // Thêm Router vào constructor
+              private authService: AuthService) { } // Thêm Router vào constructor
 
   ngAfterViewInit() {
     this.togglePassword.nativeElement.addEventListener('click', () => {
@@ -92,5 +91,8 @@ export class Login {
         });
       }
     })
+  }
+  gotoSignin() {
+    this.router.navigate(['/signin']);
   }
 }

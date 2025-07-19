@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -22,7 +23,7 @@ export class Signup implements AfterViewInit {
   @ViewChild('successModal') successModal!: ElementRef<HTMLDivElement>;
   @ViewChild('closeModal') closeModal!: ElementRef<HTMLButtonElement>;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private router: Router) {}
 
   ngAfterViewInit() {
     // Password toggle functionality
@@ -138,5 +139,8 @@ export class Signup implements AfterViewInit {
     if (/[0-9]/.test(password)) strength += 1;
     if (/[^A-Za-z0-9]/.test(password)) strength += 1;
     return strength;
+  }
+  gotoLogin(): void {
+    this.router.navigate(["/login"]);
   }
 }
