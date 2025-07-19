@@ -78,6 +78,7 @@ export class Login {
             this.submitBtn.nativeElement.innerHTML = 'Login to GameHub';
             if (res?.result?.message === true && res?.result?.token) {
               localStorage.setItem('token', res.result.token);
+              this.authService.login(res.result.token); // Thêm dòng này
               this.router.navigate(['/main']);
             } else {
               alert('Đăng nhập thất bại!');
