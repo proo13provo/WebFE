@@ -10,8 +10,7 @@ import {LoadService} from '../../service/loadService/load-service';
   selector: 'app-login',
   standalone: true,
   imports: [
-    FormsModule,
-    AsyncPipe
+    FormsModule
   ],
   templateUrl: './login.html',
   styleUrls: ['./login.css']
@@ -93,6 +92,6 @@ export class Login {
     })
   }
   gotoSignin() {
-    this.router.navigate(['/signin']);
+    this.router.navigate(['/signup']);
   }
 }
