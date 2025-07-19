@@ -1,0 +1,18 @@
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap';
+
+.body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f172a;
+}
+
+.game-carousel-image {
+  transition: transform 0.3s ease;
+}
+
+.game-carousel-image:hover {
+  transform: scale(1.02);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,32 @@
+.min-h-screen {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+  .glow-btn {
+    position: relative;
+    overflow: hidden;
+  }
+  .glow-btn span:first-child {
+    position: relative;
+    z-index: 1;
+  }
+  .glow-btn:hover::before {
+    opacity: 1;
+  }
+  .input-focus:focus {
+    box-shadow: 0 0 0 3px rgba(157, 80, 187, 0.3);
+  }
+  .password-toggle {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .shake {
+    animation: shake 0.5s;
+  }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+  }

@@ -1,0 +1,85 @@
+<nav class="bg-gray-900 bg-opacity-90 backdrop-blur-md fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center">
+        <div class="flex-shrink-0">
+          <span class="text-purple-500 font-bold text-2xl">Game<span class="text-white">Hub</span></span>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="#" class="text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Games</a>
+            <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">News</a>
+            <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reviews</a>
+            <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Community</a>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:block">
+        <div class="ml-4 flex items-center md:ml-6">
+          <div class="relative mx-4">
+            <input
+              type="text"
+              placeholder="Search games..."
+              class="bg-gray-800 text-white px-4 py-1 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 w-64" />
+            <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          @if (!isLoggedIn) {
+            <button (click)="gotoLogin()" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-1 rounded-full text-sm font-medium transition duration-300">
+              Sign In
+            </button>
+          } @else {
+            <div class="relative group">
+              <button (click)="logout()" class="text-gray-300 hover:text-white px-3 py-2">
+              <i class="fa-solid fa-user"></i>
+            </button>
+            </div>
+          }
+          <div class="relative group">
+            <button class="text-gray-300 hover:text-white px-3 py-2">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="absolute -top-1 -right-1 bg-purple-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile button -->
+      <div class="-mr-2 flex md:hidden">
+        <button
+          type="button"
+          (click)="toggleMobileMenu()"
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+          <span class="sr-only">Open main menu</span>
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div [class.hidden]="!isMobileMenuOpen" class="md:hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="#" class="text-white block px-3 py-2 rounded-md text-base font-medium"><i class="fa-solid fa-house"></i>  Home</a>
+      <a href="#" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"><i class="fa-solid fa-gamepad"></i>  Games</a>
+      <a href="#" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"><i class="fa-solid fa-newspaper"></i>  News</a>
+      <a href="#" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"><i class="fa-solid fa-comments"></i>  Reviews</a>
+      <a href="#" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"><i class="fa-solid fa-globe"></i>  Community</a>
+      @if (!isLoggedIn) {
+        <button (click)="gotoLogin()" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full text-sm font-medium w-full mt-2 transition duration-300">
+          Sign In
+        </button>
+      }@else{
+        <div class="relative group">
+          <button class="text-gray-300 hover:text-white px-3 py-2">
+            <i class="fa-solid fa-user"></i>  user profile
+          </button>
+        </div>
+      }
+      <div class="mt-4 ma">
+        <input type="text" placeholder="Search games..." class=" mt-2 bg-gray-800 text-white px-4 py-2 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 w-full">
+      </div>
+    </div>
+  </div>
+</nav>
