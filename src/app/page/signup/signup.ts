@@ -141,7 +141,6 @@ export class Signup implements AfterViewInit {
     return strength;
   }
   gotoLogin(): void {
-    localStorage.removeItem('token'); // Xóa token cũ nếu có
     this.router.navigate(['/login']);
   }
 }

@@ -25,7 +25,7 @@
       </ul>
     </div>
     <div class="text-gray-400 text-sm mt-8">
-      <p>Already a member? <a (click)="gotoLogin()" href="#" class="text-purple-300 hover:text-white">Sign in here</a></p>
+      <p>Already a member? <a (click)="gotoLogin()" class="text-purple-300 hover:text-white">Sign in here</a></p>
     </div>
   </div>
 
@@ -124,7 +124,7 @@
 
         <!-- Login Link -->
         <div class="text-center text-sm text-gray-600">
-          Already have an account? <a (click)="gotoLogin()" href="#" class="text-purple-600 font-medium hover:text-purple-500">Log in</a>
+          Already have an account? <a (click)="gotoLogin()" class="text-purple-600 font-medium hover:text-purple-500">Log in</a>
         </div>
       </form>
     </div>
@@ -139,7 +139,7 @@
     </div>
     <h3 class="text-2xl font-bold text-gray-800 mb-2">Registration Successful!</h3>
     <p class="text-gray-600 mb-6">Welcome to GameHub. Your gaming adventure begins now!</p>
-    <button #closeModal (click)="gotoLogin()" id="closeModal" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition">
+    <button #closeModal type="button" (click)="gotoLogin()" id="closeModal" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition">
       Continue to Dashboard
     </button>
   </div>

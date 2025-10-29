@@ -2,9 +2,7 @@ import {Component, ElementRef, ViewChild, AfterViewInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router'; // Thêm import này
 import { FormsModule } from '@angular/forms';
-import {AsyncPipe, NgClass} from '@angular/common';
 import {AuthService} from '../../service/authService/auth-service';
-import {LoadService} from '../../service/loadService/load-service';
 
 @Component({
   selector: 'app-login',

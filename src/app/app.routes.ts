@@ -32,13 +32,17 @@ export const routes: Routes = [
 
   },
   {
-    path: '',
-    component: Layout,
-    children: [
-      {
-        path: 'dashboard',
-        component: DashBoard,
-      }
-    ]
+    path: 'dashboard',
+    component: DashBoard,
   }
+  // {
+  //   path: '',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'dashboard',
+  //       component: DashBoard,
+  //     }
+  //   ]
+  // }
 ];

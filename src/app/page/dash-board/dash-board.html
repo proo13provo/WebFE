@@ -1,1 +1,499 @@
-<p>dash-board works!</p>
+<app-nav-bar></app-nav-bar>
+<body class="antialiased">
+<div class="min-h-screen pb-16">
+  <!-- Profile Header -->
+  <div class="profile-banner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+      <div class="flex flex-col md:flex-row items-center profile-header">
+        <div class="flex-shrink-0 mb-6 md:mb-0 profile-avatar">
+          <div class="relative">
+            <img class="h-32 w-32 rounded-full border-4 border-white shadow-xl" src="https://randomuser.me/api/portraits/men/42.jpg" alt="Profile picture">
+            <div class="absolute -bottom-2 -right-2 bg-indigo-600 rounded-full p-2 shadow-lg">
+              <i class="fas fa-crown text-yellow-400 text-lg"></i>
+            </div>
+          </div>
+        </div>
+        <div class="md:ml-8 flex-1 text-center md:text-left">
+          <h1 class="text-3xl md:text-4xl font-bold text-white">John Gamerson</h1>
+          <p class="text-indigo-200 text-lg">@johngamer</p>
+          <div class="flex flex-wrap justify-center md:justify-start items-center mt-3 gap-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-600 text-white flex items-center">
+                                <i class="fas fa-level-up-alt mr-1"></i> Level 15
+                            </span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-gray-800 text-white flex items-center">
+                                <i class="fas fa-trophy text-yellow-400 mr-1"></i> Gold Member
+                            </span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-gray-800 text-white flex items-center">
+                                <i class="fas fa-calendar-alt mr-1"></i> Member since 2021
+                            </span>
+          </div>
+        </div>
+        <div class="mt-6 md:mt-0">
+          <button class="px-6 py-2 bg-white text-indigo-600 rounded-lg font-medium hover:bg-gray-100 transition duration-200 flex items-center shadow-lg hover:shadow-xl">
+            <i class="fas fa-pencil-alt mr-2"></i> Edit Profile
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Left Column -->
+      <div class="lg:col-span-2 space-y-6">
+        <!-- About Section -->
+        <div class="bg-gray-800 rounded-xl shadow-xl overflow-hidden transform transition hover:scale-[1.01]">
+          <div class="px-6 py-4">
+            <div class="flex items-center justify-between">
+              <h2 class="text-xl font-bold flex items-center">
+                <i class="fas fa-user-circle text-indigo-400 mr-2"></i> About
+              </h2>
+              <button class="text-indigo-400 hover:text-indigo-300 transition">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+            </div>
+            <p class="mt-3 text-gray-300">
+              Hardcore gamer with a passion for RPGs and strategy games. Currently obsessed with WebGameHub's latest MMO.
+              Streaming my gameplay every weekend. Let's connect and play together!
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-gray-700 text-gray-300 hover:bg-indigo-600 hover:text-white transition">RPG Lover</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-gray-700 text-gray-300 hover:bg-indigo-600 hover:text-white transition">Strategy Master</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-gray-700 text-gray-300 hover:bg-indigo-600 hover:text-white transition">Competitive Player</span>
+            </div>
+          </div>
+          <div class="border-t border-gray-700 px-6 py-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <p class="text-sm text-gray-400">Location</p>
+                <p class="text-white flex items-center">
+                  <i class="fas fa-map-marker-alt mr-2 text-indigo-400"></i>San Francisco, CA
+                </p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-400">Website</p>
+                <a href="#" class="text-indigo-400 hover:underline flex items-center">
+                  <i class="fas fa-globe mr-2"></i>streamer.john
+                </a>
+              </div>
+              <div>
+                <p class="text-sm text-gray-400">Social</p>
+                <div class="flex space-x-3 mt-1">
+                  <a href="#" class="text-gray-300 hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="text-gray-300 hover:text-purple-400 transition"><i class="fab fa-twitch"></i></a>
+                  <a href="#" class="text-gray-300 hover:text-indigo-400 transition"><i class="fab fa-discord"></i></a>
+                  <a href="#" class="text-gray-300 hover:text-red-400 transition"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+              <div>
+                <p class="text-sm text-gray-400">Last Online</p>
+                <p class="text-white flex items-center">
+                  <i class="far fa-clock mr-2 text-indigo-400"></i>2 hours ago
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Stats -->
+        <div class="bg-gray-800 rounded-xl shadow-xl overflow-hidden transform transition hover:scale-[1.01]">
+          <div class="px-6 py-4">
+            <h2 class="text-xl font-bold mb-4 flex items-center">
+              <i class="fas fa-chart-line text-indigo-400 mr-2"></i> Game Statistics
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- XP Progress -->
+              <div>
+                <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-gray-300 flex items-center">
+                                            <i class="fas fa-bolt text-yellow-400 mr-1"></i> Experience Points
+                                        </span>
+                  <span class="text-sm font-medium text-indigo-400">12,450/15,000 XP</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 83%"></div>
+                </div>
+                <p class="mt-1 text-xs text-gray-400">Level 15 (83%)</p>
+              </div>
+
+              <!-- Play Time -->
+              <div>
+                <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-gray-300 flex items-center">
+                                            <i class="fas fa-hourglass-half text-blue-400 mr-1"></i> Total Play Time
+                                        </span>
+                  <span class="text-sm font-medium text-indigo-400">248 hours</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 65%"></div>
+                </div>
+                <p class="mt-1 text-xs text-gray-400">Top 15% of players</p>
+              </div>
+
+              <!-- Games Played -->
+              <div>
+                <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-gray-300 flex items-center">
+                                            <i class="fas fa-gamepad text-green-400 mr-1"></i> Games Played
+                                        </span>
+                  <span class="text-sm font-medium text-indigo-400">47 games</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 47%"></div>
+                </div>
+                <p class="mt-1 text-xs text-gray-400">53% completion rate</p>
+              </div>
+
+              <!-- Win Rate -->
+              <div>
+                <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-gray-300 flex items-center">
+                                            <i class="fas fa-trophy text-purple-400 mr-1"></i> Competitive Win Rate
+                                        </span>
+                  <span class="text-sm font-medium text-indigo-400">72%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 72%"></div>
+                </div>
+                <p class="mt-1 text-xs text-gray-400">128 wins / 50 losses</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="bg-gray-800 rounded-xl shadow-xl overflow-hidden transform transition hover:scale-[1.01]">
+          <div class="px-6 py-4">
+            <div class="flex items-center justify-between">
+              <h2 class="text-xl font-bold flex items-center">
+                <i class="fas fa-history text-indigo-400 mr-2"></i> Recent Activity
+              </h2>
+              <a href="#" class="text-sm text-indigo-400 hover:underline flex items-center">
+                View All <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+            </div>
+            <div class="mt-4 space-y-4">
+              <!-- Activity Item -->
+              <div class="flex items-start p-3 rounded-lg hover:bg-gray-700 transition">
+                <div class="relative">
+                  <img class="h-12 w-12 rounded-full mr-3 border-2 border-indigo-500" src="https://via.placeholder.com/150" alt="Game icon">
+                  <div class="absolute -bottom-1 -right-1 bg-indigo-600 rounded-full p-1">
+                    <i class="fas fa-check text-white text-xs"></i>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <p class="font-medium">Completed "Shadow Realm" on Hard difficulty</p>
+                    <span class="text-xs text-gray-400">3h ago</span>
+                  </div>
+                  <p class="text-sm text-gray-300 mt-1">Earned 450 XP and the "Shadow Slayer" achievement</p>
+                  <div class="mt-2 flex items-center">
+                    <div class="flex space-x-1 text-yellow-400">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="text-xs text-gray-400 ml-2">4.5 rating</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Activity Item -->
+              <div class="flex items-start p-3 rounded-lg hover:bg-gray-700 transition">
+                <div class="relative">
+                  <img class="h-12 w-12 rounded-full mr-3 border-2 border-indigo-500" src="https://via.placeholder.com/150" alt="Game icon">
+                  <div class="absolute -bottom-1 -right-1 bg-purple-600 rounded-full p-1">
+                    <i class="fas fa-trophy text-white text-xs"></i>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <p class="font-medium">Reached Platinum Rank in "Battle Royale"</p>
+                    <span class="text-xs text-gray-400">1d ago</span>
+                  </div>
+                  <p class="text-sm text-gray-300 mt-1">Ranked up with 12 consecutive wins</p>
+                  <div class="mt-2 flex items-center">
+                    <span class="text-xs bg-purple-600 text-white px-2 py-1 rounded-full">Competitive</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Activity Item -->
+              <div class="flex items-start p-3 rounded-lg hover:bg-gray-700 transition">
+                <div class="relative">
+                  <img class="h-12 w-12 rounded-full mr-3 border-2 border-indigo-500" src="https://via.placeholder.com/150" alt="Game icon">
+                  <div class="absolute -bottom-1 -right-1 bg-blue-500 rounded-full p-1">
+                    <i class="fas fa-shopping-cart text-white text-xs"></i>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <p class="font-medium">Purchased "Cyberpunk Adventures" DLC</p>
+                    <span class="text-xs text-gray-400">2d ago</span>
+                  </div>
+                  <p class="text-sm text-gray-300 mt-1">New content unlocked for your favorite game</p>
+                  <div class="mt-2">
+                    <span class="text-xs bg-blue-500 text-white px-2 py-1 rounded-full">$9.99</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Activity Item -->
+              <div class="flex items-start p-3 rounded-lg hover:bg-gray-700 transition">
+                <div class="relative">
+                  <img class="h-12 w-12 rounded-full mr-3 border-2 border-indigo-500" src="https://via.placeholder.com/150" alt="Game icon">
+                  <div class="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-1">
+                    <i class="fas fa-share-alt text-white text-xs"></i>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <p class="font-medium">Shared gameplay clip from "Space Odyssey"</p>
+                    <span class="text-xs text-gray-400">3d ago</span>
+                  </div>
+                  <p class="text-sm text-gray-300 mt-1">Your clip got 124 likes and 23 comments</p>
+                  <div class="mt-2 flex items-center space-x-2">
+                                            <span class="text-xs flex items-center text-green-400">
+                                                <i class="fas fa-heart mr-1"></i> 124
+                                            </span>
+                    <span class="text-xs flex items-center text-blue-400">
+                                                <i class="fas fa-comment mr-1"></i> 23
+                                            </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="space-y-6">
+        <!-- Favorite Games -->
+        <div class="bg-gray-800 rounded-xl shadow-xl overflow-hidden transform transition hover:scale-[1.01]">
+          <div class="px-6 py-4">
+            <h2 class="text-xl font-bold mb-4 flex items-center">
+              <i class="fas fa-heart text-red-400 mr-2"></i> Favorite Games
+            </h2>
+            <div class="space-y-3">
+              <!-- Game Card -->
+              <div class="game-card rounded-lg overflow-hidden flex items-center p-3">
+                <img class="w-16 h-16 object-cover rounded-lg" src="https://via.placeholder.com/150" alt="Game cover">
+                <div class="ml-3 flex-1">
+                  <h3 class="font-bold">Shadow Realm</h3>
+                  <p class="text-xs text-gray-400">RPG</p>
+                  <div class="flex items-center mt-1">
+                    <div class="flex items-center text-yellow-400">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="text-xs text-gray-400 ml-1">4.5</span>
+                  </div>
+                </div>
+                <div class="flex flex-col items-end">
+                  <span class="text-xs font-bold bg-indigo-600 text-white px-2 py-1 rounded-full mb-1">32h</span>
+                  <span class="text-xs bg-green-600 text-white px-2 py-1 rounded-full">Playing</span>
+                </div>
+              </div>
+
+              <!-- Game Card -->
+              <div class="game-card rounded-lg overflow-hidden flex items-center p-3">
+                <img class="w-16 h-16 object-cover rounded-lg" src="https://via.placeholder.com/150" alt="Game cover">
+                <div class="ml-3 flex-1">
+                  <h3 class="font-bold">Battle Royale</h3>
+                  <p class="text-xs text-gray-400">FPS</p>
+                  <div class="flex items-center mt-1">
+                    <div class="flex items-center text-yellow-400">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <span class="text-xs text-gray-400 ml-1">4.0</span>
+                  </div>
+                </div>
+                <div class="flex flex-col items-end">
+                  <span class="text-xs font-bold bg-indigo-600 text-white px-2 py-1 rounded-full mb-1">87h</span>
+                  <span class="text-xs bg-purple-600 text-white px-2 py-1 rounded-full">Platinum</span>
+                </div>
+              </div>
+
+              <!-- Game Card -->
+              <div class="game-card rounded-lg overflow-hidden flex items-center p-3">
+                <img class="w-16 h-16 object-cover rounded-lg" src="https://via.placeholder.com/150" alt="Game cover">
+                <div class="ml-3 flex-1">
+                  <h3 class="font-bold">Cyberpunk Adventures</h3>
+                  <p class="text-xs text-gray-400">Action</p>
+                  <div class="flex items-center mt-1">
+                    <div class="flex items-center text-yellow-400">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-xs text-gray-400 ml-1">5.0</span>
+                  </div>
+                </div>
+                <div class="flex flex-col items-end">
+                  <span class="text-xs font-bold bg-indigo-600 text-white px-2 py-1 rounded-full mb-1">45h</span>
+                  <span class="text-xs bg-blue-500 text-white px-2 py-1 rounded-full">New DLC</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 text-center">
+              <a href="#" class="inline-flex items-center text-indigo-400 hover:underline text-sm">
+                View all games <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="bg-gray-800 rounded-xl shadow-xl overflow-hidden transform transition hover:scale-[1.01]">
+          <div class="px-6 py-4">
+            <div class="flex items-center justify-between">
+              <h2 class="text-xl font-bold flex items-center">
+                <i class="fas fa-trophy text-yellow-400 mr-2"></i> Achievements
+              </h2>
+              <span class="text-sm text-indigo-400">42/150</span>
+            </div>
+            <div class="mt-4 grid grid-cols-3 gap-3">
+              <!-- Achievement Badge -->
+              <div class="achievement-badge">
+                <div class="w-16 h-16 mx-auto bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center text-white text-2xl shadow-lg">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <span class="tooltip">Epic Winner: Win 100 competitive matches</span>
+              </div>
+
+              <!-- Achievement Badge -->
+              <div class="achievement-badge">
+                <div class="w-16 h-16 mx-auto bg-gradient-to-br from-purple-600 to-purple-700 rounded-full flex items-center justify-center text-white text-2xl shadow-lg">
+                  <i class="fas fa-medal"></i>
+                </div>
+                <span class="tooltip">Completionist: Finish all main quests in 3 games</span>
+              </div>
+
+              <!-- Achievement Badge -->
+              <div class="achievement-badge">
+                <div class="w-16 h-16 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl shadow-lg">
+                  <i class="fas fa-crown"></i>
+                </div>
+                <span class="tooltip">Royal Gamer: Reach level 10</span>
+              </div>
+
+              <!-- Achievement Badge -->
+              <div class="achievement-badge">
+                <div class="w-16 h-16 mx-auto bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center text-white text-2xl shadow-lg">
+                  <i class="fas fa-fire"></i>
+                </div>
+                <span class="tooltip">Hot Streak: Win 5 matches in a row</span>
+              </div>
+
+              <!-- Achievement Badge -->
+              <div class="achievement-badge">
+                <div class="w-16 h-16 mx-auto bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white text-2xl shadow-lg">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <span class="tooltip">Marathoner: Play for 50 hours total</span>
+              </div>
+
+              <!-- Achievement Badge -->
+              <div class="achievement-badge">
+                <div class="w-16 h-16 mx-auto bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center text-white text-2xl shadow-lg">
+                  <i class="fas fa-gem"></i>
+                </div>
+                <span class="tooltip">Treasure Hunter: Find all hidden items in a game</span>
+              </div>
+            </div>
+            <div class="mt-4 text-center">
+              <a href="#" class="inline-flex items-center text-indigo-400 hover:underline text-sm">
+                View all achievements <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Friends -->
+        <div class="bg-gray-800 rounded-xl shadow-xl overflow-hidden transform transition hover:scale-[1.01]">
+          <div class="px-6 py-4">
+            <div class="flex items-center justify-between">
+              <h2 class="text-xl font-bold flex items-center">
+                <i class="fas fa-users text-indigo-400 mr-2"></i> Friends
+              </h2>
+              <span class="text-sm text-indigo-400">87 friends</span>
+            </div>
+            <div class="mt-4 grid grid-cols-3 gap-3">
+              <!-- Friend -->
+              <div class="text-center friend-card">
+                <img class="w-12 h-12 rounded-full mx-auto mb-1 border-2 border-indigo-500" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Friend">
+                <p class="text-xs font-medium truncate">GamerGirl42</p>
+                <span class="text-xs text-green-400 flex items-center justify-center">
+                                        <i class="fas fa-circle text-xs mr-1"></i> Online
+                                    </span>
+              </div>
+
+              <!-- Friend -->
+              <div class="text-center friend-card">
+                <img class="w-12 h-12 rounded-full mx-auto mb-1 border-2 border-indigo-500" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Friend">
+                <p class="text-xs font-medium truncate">ProPlayerX</p>
+                <span class="text-xs text-green-400 flex items-center justify-center">
+                                        <i class="fas fa-circle text-xs mr-1"></i> Online
+                                    </span>
+              </div>
+
+              <!-- Friend -->
+              <div class="text-center friend-card">
+                <img class="w-12 h-12 rounded-full mx-auto mb-1 border-2 border-indigo-500" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Friend">
+                <p class="text-xs font-medium truncate">StrategyQueen</p>
+                <span class="text-xs text-gray-400 flex items-center justify-center">
+                                        <i class="fas fa-circle text-xs mr-1"></i> 2h ago
+                                    </span>
+              </div>
+
+              <!-- Friend -->
+              <div class="text-center friend-card">
+                <img class="w-12 h-12 rounded-full mx-auto mb-1 border-2 border-indigo-500" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Friend">
+                <p class="text-xs font-medium truncate">NoobSlayer99</p>
+                <span class="text-xs text-gray-400 flex items-center justify-center">
+                                        <i class="fas fa-circle text-xs mr-1"></i> 1d ago
+                                    </span>
+              </div>
+
+              <!-- Friend -->
+              <div class="text-center friend-card">
+                <img class="w-12 h-12 rounded-full mx-auto mb-1 border-2 border-indigo-500" src="https://randomuser.me/api/portraits/women/23.jpg" alt="Friend">
+                <p class="text-xs font-medium truncate">RPGMaster</p>
+                <span class="text-xs text-green-400 flex items-center justify-center">
+                                        <i class="fas fa-circle text-xs mr-1"></i> Online
+                                    </span>
+              </div>
+
+              <!-- Friend -->
+              <div class="text-center friend-card">
+                <img class="w-12 h-12 rounded-full mx-auto mb-1 border-2 border-indigo-500" src="https://randomuser.me/api/portraits/men/55.jpg" alt="Friend">
+                <p class="text-xs font-medium truncate">SpeedRunner</p>
+                <span class="text-xs text-gray-400 flex items-center justify-center">
+                                        <i class="fas fa-circle text-xs mr-1"></i> 3d ago
+                                    </span>
+              </div>
+            </div>
+            <div class="mt-4 text-center">
+              <a href="#" class="inline-flex items-center text-indigo-400 hover:underline text-sm">
+                View all friends <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
